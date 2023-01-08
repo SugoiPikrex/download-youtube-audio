@@ -50,8 +50,8 @@ def download_transcript(video_id, destination, language_list):
 download_transcript(vid_id, destination, languages)
 
 # split video into segments based on srt timestamp
-video_name = vid_title + ".mp3"
-subtitle_name = vid_title + "_subs.srt"
+video_name = os.path.join(destination   , vid_title + ".mp3")
+subtitle_name = os.path.join(destination, vid_title + "_subs.srt")
 subprocess.check_call(["./srt-split.sh", video_name, subtitle_name])
 print("video split to segments based on srt timestamp")
 
