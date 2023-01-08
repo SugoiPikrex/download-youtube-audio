@@ -2,8 +2,12 @@
 
 
 # Usage Instructions
+Make bash script executable
+`chmod u+x srt-split.sh`
 
+Execute
 `python download_youtube.py `
+then
 1. Enter video ID to download
 2. Enter destination folder to save the video 
 
