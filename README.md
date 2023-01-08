@@ -1,0 +1,20 @@
+# Download and split audio/video file from youtube 
+
+
+# Usage Instructions
+
+`python download_youtube.py `
+1. Enter video ID to download
+2. Enter destination folder to save the video 
+
+
+
+# References:
+srt split script inspiration:
+https://github.com/adueck/split-video-by-srt
+
+usage for SRT bash script:
+`usage: .\srt-split.sh [video file] [subtitle file] (optional)[output format]`
+
+
+
