@@ -81,14 +81,14 @@ elif len(parts)>=10:
 count = 1  
 video_location = os.path.join(destination, vid_title + '-clips')
 #print(video_location)
-with open(os.path.join(video_location, 'metadata.csv'), 'w', newline='') as file:
-    writer = csv.writer(file, delimiter=',')
+#with open(os.path.join(video_location, 'metadata.csv'), 'w', newline='') as file:
+with open(os.path.join(video_location, 'metadata.txt'), 'w') as file:
+    #writer = csv.writer(file, delimiter=',')
     for part in parts:
         start_time = part.start
         end_time = part.end
         videopart_digit = str(count).zfill(z_fill_digit)
         videopart_name = videopart_digit + '-'  + vid_title + '.wav'
-        writer.writerow([video_location + '/{}|{}'.format(videopart_name, part.text)])
-        
-        
+        #writer.writerow([video_location + '/{}|{}'.format(videopart_name, part.text)])
+        file.write('{}|{}'.format(videopart_name, part.text.replace('\n', ' ').strip()) + '\n')
         count +=1
